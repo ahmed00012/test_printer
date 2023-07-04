@@ -157,6 +157,8 @@ class _MyHomePageState extends State<MyHomePage> {
       if (res == PosPrintResult.success) {
         await testReceipt(printer);
         printer.disconnect();
+        printer.beep();
+
       }
       else{
         setState(() {
